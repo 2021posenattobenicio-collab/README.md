@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consejo según el clima</title>
+</head>
+<body>
+    <h1>Consejo según el clima</h1>
+
+    <form method="POST">
+        <label>¿Cuántos grados hace?</label><br>
+        <input type="number" name="temperatura" required><br><br>
+
+        <label>¿Llueve?</label><br>
+        <select name="llueve">
+            <option value="s">Sí</option>
+            <option value="n">No</option>
+        </select><br><br>
+
+        <button type="submit">Obtener consejo</button>
+    </form>
+
+    {% if resultado %}
+        <h2>Resultado</h2>
+        <p>{{ resultado }}</p>
+    {% endif %}
+</body>
+</html>
